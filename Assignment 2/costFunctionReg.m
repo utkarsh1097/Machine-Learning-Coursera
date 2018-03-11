@@ -32,7 +32,7 @@ endfor
 
 J = J/m;
 
-grad = (h-y)'*X;
+grad = X'*(h-y); %Corrected. Earlier I was returning the transpose of grad. Answer is still fine, but we should be consistent from our end
 
 
 for j = 2:n
