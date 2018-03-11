@@ -28,7 +28,7 @@ for i = 1:m
 endfor
 J = -J/m;
 
-grad = (h-y)'*X;
+grad = X'*(h-y); %Corrected. It should be a size(theta) dimensional matrix. I was returning the transpose
 grad = grad/m;
 
 
